@@ -62,7 +62,7 @@ function Header({ mode }) {
               borderRadius: '999px',
               bgcolor:
                 theme.palette.mode === 'light'
-                  ? 'rgba(255, 255, 255, 0.4)'
+                  ? 'rgba(255, 255, 255, 0.7)'
                   : 'rgba(0, 0, 0, 0.4)',
               backdropFilter: 'blur(24px)',
               maxHeight: 40,
@@ -70,7 +70,7 @@ function Header({ mode }) {
               borderColor: 'divider',
               boxShadow:
                 theme.palette.mode === 'light'
-                  ? `0 0 1px rgba(85, 166, 246, 0.1), 1px 1.5px 2px -1px rgba(85, 166, 246, 0.15), 4px 4px 12px -2.5px rgba(85, 166, 246, 0.15)`
+                  ? `0 0 1px rgba(94, 251, 123, 0.1), 1px 1.5px 2px -1px rgba(94, 251, 123, 0.15), 4px 4px 12px -2.5px rgba(94, 251, 123, 0.15)`
                   : '0 0 1px rgba(2, 31, 59, 0.7), 1px 1.5px 2px -1px rgba(2, 31, 59, 0.65), 4px 4px 12px -2.5px rgba(2, 31, 59, 0.65)',
             })}
           >
@@ -142,7 +142,7 @@ function Header({ mode }) {
             >
               {/* <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} /> */}
               <Button
-                color="primary"
+                color="success"
                 variant="text"
                 size="small"
                 component="a"
@@ -152,7 +152,7 @@ function Header({ mode }) {
                 Sign in
               </Button>
               <Button
-                color="primary"
+                color="success"
                 variant="contained"
                 size="small"
                 component="a"
