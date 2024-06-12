@@ -165,7 +165,7 @@ function Header({ mode }) {
             <Box sx={{ display: { sm: '', md: 'none' } }}>
               <Button
                 variant="text"
-                color="primary"
+                color="success"
                 aria-label="menu"
                 onClick={toggleDrawer(true)}
                 sx={{ minWidth: '30px', p: '4px' }}
@@ -207,7 +207,7 @@ function Header({ mode }) {
                   <Divider />
                   <MenuItem>
                     <Button
-                      color="primary"
+                      color="success"
                       variant="contained"
                       component="a"
                       href="/material-ui/getting-started/templates/sign-up/"
@@ -219,7 +219,7 @@ function Header({ mode }) {
                   </MenuItem>
                   <MenuItem>
                     <Button
-                      color="primary"
+                      color="success"
                       variant="outlined"
                       component="a"
                       href="/material-ui/getting-started/templates/sign-in/"
