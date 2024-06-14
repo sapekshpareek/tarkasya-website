@@ -5,12 +5,13 @@
 // import Pricing from "@/components/version1/Pricing";
 // import Highlights from "@/components/version1/Highlights";
 import { Divider } from "@mui/material";
+import Hero from "@/components/version2/Hero";
 
 export default function Home() {
   return (
     <>
-      {/* <Hero />
-      <Features />
+      <Hero />
+      {/* <Features />
       <Highlights />
       <Pricing />
       <Divider /> */}
