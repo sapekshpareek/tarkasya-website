@@ -1,7 +1,8 @@
 import { Inter } from "next/font/google";
 // import "./globals.css";
 // import Header from "@/components/version1/Header";
-import Footer from "@/components/version1/Footer";
+// import Footer from "@/components/version1/Footer";
+import Footer from "@/components/version2/Footer";
 import Header from "@/components/version2/Header";
 import { CssBaseline } from "@mui/material";
 

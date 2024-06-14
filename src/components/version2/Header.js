@@ -59,7 +59,7 @@ export default function Header() {
           >
             <img
               src={
-                "https://res.cloudinary.com/daw4ojh5s/image/upload/v1718170112/logo-no-background_i0cdlk.png"
+                "https://res.cloudinary.com/daw4ojh5s/image/upload/v1718300801/logo-no-background_kzosvv.png"
               }
               style={logoStyle}
             />
