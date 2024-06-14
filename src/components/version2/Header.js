@@ -36,7 +36,7 @@ export default function Header() {
         bgcolor: "transparent",
         color: "black",
         mt: 2,
-        ml: 2,
+        // ml: 2,
       }}
     >
       <Container maxWidth="lg">
