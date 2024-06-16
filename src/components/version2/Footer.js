@@ -23,21 +23,50 @@ export default function Footer() {
     <Box>
       <Box
         sx={{
-          backgroundColor: "#cfff92",
-          maxHeight: "100vh",
-          borderRadius: "20px 20px 0px 0px",
+          position: "relative",
+          minHeight: {
+            xs: "40rem",
+            sm: "50rem",
+            md: "50rem",
+            lg: "50rem",
+            xl: "50rem",
+          },
+          top: { xs: "18rem", xl: "5rem", lg: '1rem' },
         }}
       >
-        <Container
+        <Box
           sx={{
-            backgroundColor: "#063b26",
-            minHeight: "50vh",
-            borderRadius: "20px",
-            color: "#ffffff",
+            backgroundColor: "#cfff92",
+            // maxHeight: "50vh",
+            borderRadius: "20px 20px 0px 0px",
+            zIndex: 1,
+            position: "absolute",
+            top: { xs: "15rem", sm: "20rem", xl: "18rem" , lg:'18rem' , md: '18rem'},
+            // left: '50px',
+            width: "100%",
+            minHeight: "200px",
           }}
         >
-          sdfsdfsdfsddf
-        </Container>
+          <Box
+            sx={{
+              backgroundColor: "#063b26",
+              // minHeight: "60vh",
+              borderRadius: "20px",
+              color: "#ffffff",
+              zIndex: 2,
+              position: "absolute",
+              top: { sm: "-35vh", xs: "-15rem", xl: "-15rem", lg:'-16rem' },
+              left: "10%",
+              width: "80%",
+              minHeight: "200px",
+            }}
+          >
+            <Box sx={{p: '3rem'}}>
+
+              <Typography>Analytics and Reporting</Typography>
+            </Box>
+          </Box>
+        </Box>
       </Box>
       <Box
         id="footer"
@@ -47,8 +76,9 @@ export default function Footer() {
           alignItems: "center",
           py: { xs: 10, sm: 8 },
           gap: { xs: 4, sm: 8 },
-          // position: "fixed",
-          // bottom: 0,
+          position: "absolute",
+          bottom: { sm: "-45rem", xs: "-30rem", xl: "-28rem", lg: '-28rem', md: '-45rem' },
+          zIndex: 0,
           width: "100%",
           backgroundColor: "#cfff92",
           // borderRadius: "20px 20px 0px 0px",
