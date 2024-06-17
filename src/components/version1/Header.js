@@ -51,7 +51,7 @@ function Header({ mode }) {
           mt: 2,
         }}
       >
-        <Container maxWidth="lg">
+        <Box maxWidth="lg">
           <Toolbar
             variant="regular"
             sx={(theme) => ({
@@ -235,7 +235,7 @@ function Header({ mode }) {
               </Drawer>
             </Box>
           </Toolbar>
-        </Container>
+        </Box>
       </AppBar>
     </div>
   );

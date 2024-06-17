@@ -31,7 +31,7 @@ export default function Footer() {
             lg: "50rem",
             xl: "50rem",
           },
-          top: { xs: "18rem", xl: "5rem", lg: '1rem' },
+          top: { xs: "18rem", xl: "5rem", lg: "1rem" },
         }}
       >
         <Box
@@ -41,7 +41,13 @@ export default function Footer() {
             borderRadius: "20px 20px 0px 0px",
             zIndex: 1,
             position: "absolute",
-            top: { xs: "15rem", sm: "20rem", xl: "18rem" , lg:'18rem' , md: '18rem'},
+            top: {
+              xs: "15rem",
+              sm: "20rem",
+              xl: "18rem",
+              lg: "18rem",
+              md: "18rem",
+            },
             // left: '50px',
             width: "100%",
             minHeight: "200px",
@@ -55,15 +61,20 @@ export default function Footer() {
               color: "#ffffff",
               zIndex: 2,
               position: "absolute",
-              top: { sm: "-35vh", xs: "-15rem", xl: "-15rem", lg:'-16rem' },
-              left: "10%",
-              width: "80%",
+              top: { sm: "-35vh", xs: "-15rem", xl: "-15rem", lg: "-16rem" },
+              left: "5%",
+              width: "90%",
               minHeight: "200px",
             }}
           >
-            <Box sx={{p: '3rem'}}>
-
-              <Typography>Analytics and Reporting</Typography>
+            <Box sx={{ p: "3rem" }}>
+              <Box sx={{maxWidth: {lg: '50%'}}}>
+                <Typography mb={3}>Analytics and Reporting</Typography>
+                <Typography variant="h3" >
+                  Grow Business With <br />Just Few Clicks!
+                </Typography>
+              </Box>
+              <Box>sdf</Box>
             </Box>
           </Box>
         </Box>
@@ -77,7 +88,13 @@ export default function Footer() {
           py: { xs: 10, sm: 8 },
           gap: { xs: 4, sm: 8 },
           position: "absolute",
-          bottom: { sm: "-45rem", xs: "-30rem", xl: "-28rem", lg: '-28rem', md: '-45rem' },
+          bottom: {
+            sm: "-45rem",
+            xs: "-30rem",
+            xl: "-28rem",
+            lg: "-28rem",
+            md: "-45rem",
+          },
           zIndex: 0,
           width: "100%",
           backgroundColor: "#cfff92",
