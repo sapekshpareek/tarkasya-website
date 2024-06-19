@@ -25,13 +25,14 @@ export default function Footer() {
         sx={{
           position: "relative",
           minHeight: {
-            xs: "40rem",
-            sm: "50rem",
+            xs: "55rem",
+            sm: "60rem",
             md: "50rem",
             lg: "50rem",
             xl: "50rem",
           },
-          top: { xs: "18rem", xl: "5rem", lg: "1rem" },
+          // bgcolor: "red",
+          top: { xs: "18rem", xl: "5rem", lg: "0rem" },
         }}
       >
         <Box
@@ -42,7 +43,7 @@ export default function Footer() {
             zIndex: 1,
             position: "absolute",
             top: {
-              xs: "15rem",
+              xs: "20rem",
               sm: "20rem",
               xl: "18rem",
               lg: "18rem",
@@ -50,7 +51,7 @@ export default function Footer() {
             },
             // left: '50px',
             width: "100%",
-            minHeight: "200px",
+            minHeight: { xs: "300px", sm: "300px", md: '200px' },
           }}
         >
           <Box
@@ -61,20 +62,73 @@ export default function Footer() {
               color: "#ffffff",
               zIndex: 2,
               position: "absolute",
-              top: { sm: "-35vh", xs: "-15rem", xl: "-15rem", lg: "-16rem" },
-              left: "5%",
-              width: "90%",
+              top: { sm: "-35vh", xs: "-18rem", xl: "-15rem", lg: "-14rem" },
+              left: "10%",
+              width: "80%",
               minHeight: "200px",
             }}
           >
-            <Box sx={{ p: "3rem" }}>
-              <Box sx={{maxWidth: {lg: '50%'}}}>
-                <Typography mb={3}>Analytics and Reporting</Typography>
-                <Typography variant="h3" >
-                  Grow Business With <br />Just Few Clicks!
-                </Typography>
+            <Box
+              sx={{
+                p: "3rem",
+                display: "flex",
+                flexDirection: { xs: "column", sm: "row" },
+                justifyContent: "space-between",
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 4,
+                  minWidth: { xs: "100%", sm: "60%" },
+                  // maxWidth: { lg: "50%" },
+                }}
+              >
+                <Box>
+                  <Typography mb={4}>Analytics and Reporting</Typography>
+                  <Typography variant="h3" sx={{ fontWeight: 550 }}>
+                    Grow Business With <br />
+                    Just Few Clicks!
+                  </Typography>
+                  <Typography sx={{ mt: 4 }}>
+                    Grow Business With <br />
+                    Just Few Clicks!
+                  </Typography>
+                </Box>
+                <Box sx={{ mt: 2 }}>
+                  <Button
+                    variant="contained"
+                    component="a"
+                    href="#"
+                    target="_blank"
+                    sx={{
+                      color: "#063b26",
+                      bgcolor: "#ffffff",
+                      borderRadius: "20px",
+                      padding: "8px 15px",
+                      fontWeight: "500",
+                    }}
+                  >
+                    Book a Demo
+                  </Button>
+                </Box>
               </Box>
-              <Box>sdf</Box>
+              <Box
+                sx={{
+                  display: { xs: "none", sm: "flex" },
+                  // flexDirection: "column",
+                  minHeight: "80%",
+                  minWidth: "40%",
+                  bgcolor: "#afafaf",
+                  borderRadius: "20px",
+                  textAlign: "center",
+                  color: "#000000",
+                  alignItems: "center",
+                }}
+              >
+                <Typography variant="h3">Image to be placed here!</Typography>
+              </Box>
             </Box>
           </Box>
         </Box>
@@ -89,8 +143,8 @@ export default function Footer() {
           gap: { xs: 4, sm: 8 },
           position: "absolute",
           bottom: {
-            sm: "-45rem",
-            xs: "-30rem",
+            sm: "-55rem",
+            xs: "-40rem",
             xl: "-28rem",
             lg: "-28rem",
             md: "-45rem",
