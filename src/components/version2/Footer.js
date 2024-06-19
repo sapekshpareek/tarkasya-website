@@ -51,7 +51,7 @@ export default function Footer() {
             },
             // left: '50px',
             width: "100%",
-            minHeight: { xs: "300px", sm: "300px", md: '200px' },
+            minHeight: { xs: "22rem", sm: "24rem", md: '200px' },
           }}
         >
           <Box
@@ -143,8 +143,8 @@ export default function Footer() {
           gap: { xs: 4, sm: 8 },
           position: "absolute",
           bottom: {
-            sm: "-55rem",
-            xs: "-40rem",
+            sm: "-50rem",
+            xs: "-45rem",
             xl: "-28rem",
             lg: "-28rem",
             md: "-45rem",
