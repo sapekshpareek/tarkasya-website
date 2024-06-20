@@ -1,3 +1,4 @@
+'use client'
 import {
   Container,
   Typography,
@@ -20,19 +21,21 @@ const logoStyle = {
 
 export default function Footer() {
   return (
-    <Box>
+    <Box
+    // sx={{mt: '3rem'}}
+    >
       <Box
         sx={{
           position: "relative",
           minHeight: {
-            xs: "55rem",
-            sm: "60rem",
-            md: "50rem",
-            lg: "50rem",
-            xl: "50rem",
+            xs: "40rem",
+            sm: "40rem",
+            md: "30rem",
+            lg: "30rem",
+            xl: "30rem",
           },
           // bgcolor: "red",
-          top: { xs: "18rem", xl: "5rem", lg: "0rem" },
+          // top: { xs: "18rem", xl: "5rem" },
         }}
       >
         <Box
@@ -51,7 +54,7 @@ export default function Footer() {
             },
             // left: '50px',
             width: "100%",
-            minHeight: { xs: "22rem", sm: "24rem", md: '200px' },
+            minHeight: { xs: "22rem", sm: "24rem", md: "200px" },
           }}
         >
           <Box
@@ -102,13 +105,20 @@ export default function Footer() {
                     component="a"
                     href="#"
                     target="_blank"
-                    sx={{
-                      color: "#063b26",
-                      bgcolor: "#ffffff",
-                      borderRadius: "20px",
-                      padding: "8px 15px",
-                      fontWeight: "500",
-                    }}
+                    sx={[
+                      {
+                        color: "#063b26",
+                        bgcolor: "#ffffff",
+                        borderRadius: "20px",
+                        padding: "8px 15px",
+                        fontWeight: "500",
+                      },
+                      (theme) => ({
+                        "&:hover": {
+                          bgcolor: "#ffffff",
+                        },
+                      }),
+                    ]}
                   >
                     Book a Demo
                   </Button>
@@ -141,14 +151,14 @@ export default function Footer() {
           alignItems: "center",
           py: { xs: 10, sm: 8 },
           gap: { xs: 4, sm: 8 },
-          position: "absolute",
-          bottom: {
-            sm: "-50rem",
-            xs: "-45rem",
-            xl: "-28rem",
-            lg: "-28rem",
-            md: "-45rem",
-          },
+          position: "sticky",
+          // bottom: {
+          //   sm: "-50rem",
+          //   xs: "-45rem",
+          //   xl: "-30rem",
+          //   lg: "-28rem",
+          //   md: "-45rem",
+          // },
           zIndex: 0,
           width: "100%",
           backgroundColor: "#cfff92",
