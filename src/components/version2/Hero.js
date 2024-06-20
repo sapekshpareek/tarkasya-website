@@ -1,3 +1,4 @@
+"use client";
 import { Box, Container, Stack, Typography } from "@mui/material";
 import React from "react";
 
@@ -6,30 +7,25 @@ export default function Hero() {
     <Box id="hero">
       <Container
         sx={{
+          minHeight: "100vh",
+          bgcolor: "#020202",
+          color: "#ffffff",
           display: "flex",
-          flexDirection: "column",
+          flexDirection: { xs: "column", sm: "row" },
           alignItems: "center",
           justifyContent: "space-between",
-          pt: { xs: 14, sm: 20 },
-          pb: { xs: 8, sm: 12 },
+          // pt: { xs: 14, sm: 20 },
+          // pb: { xs: 8, sm: 12 },
         }}
       >
-        <Stack spacing={2} useFlexGap sx={{ width: { xs: "100%", sm: "70%" } }}>
-          <Typography
-            variant="h1"
-            sx={{ fontSize: "clamp(3.5rem, 10vw, 4rem)", fontWeight: 550}}
-          >
-            WhatsApp
-          </Typography>
-        </Stack>
-        {/* <Box> sdf</Box>
-        <Box> sdfd</Box>
-        <Box> sdf</Box>
-        <Box> sdfd</Box>
-        <Box> sdf</Box>
-        <Box> sdfd</Box>
-        <Box> sdf</Box>
-        <Box> sdfd</Box> */}
+        <Box sx={{ display: "flex", flexDirection: "column" }}>
+          <Typography variant="h1">This is HERO Section</Typography>
+          <Typography variant="h3">This is Under Development!</Typography>
+          {/* <Typography>Empower Your Finances with Precision & Ease.</Typography> */}
+        </Box>
+        <Box sx={{ display: "flex", flexDirection: "column" }}>
+          {/* <Typography>sdf</Typography> */}
+        </Box>
       </Container>
     </Box>
   );

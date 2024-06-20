@@ -8,12 +8,13 @@ import {
   Button,
   Typography,
   Drawer,
+  Link,
   colors,
   ThemeProvider,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import React from "react";
-import Link from "next/link";
+// import Link from "next/link";
 
 const logoStyle = {
   width: "140px",
@@ -57,12 +58,14 @@ export default function Header() {
               px: 0,
             }}
           >
+            <Button href="/">
             <img
               src={
                 "https://res.cloudinary.com/daw4ojh5s/image/upload/v1718300801/logo-no-background_kzosvv.png"
               }
               style={logoStyle}
-            />
+              />
+              </Button>
           </Box>
           <Box
             sx={{
@@ -139,18 +142,18 @@ export default function Header() {
                     href="https://yardstick.live"
                     target="_blank"
                     sx={[
-                        {
-                          bgcolor: "#063b26",
+                      {
+                        bgcolor: "#063b26",
                         //   borderRadius: "20px",
-                        
-                          padding: "8px 15px",
+
+                        padding: "8px 15px",
+                      },
+                      (theme) => ({
+                        "&:hover": {
+                          bgcolor: "#1e4e3b",
                         },
-                        (theme) => ({
-                          "&:hover": {
-                            bgcolor: "#1e4e3b",
-                          },
-                        }),
-                      ]}
+                      }),
+                    ]}
                   >
                     Yardstick
                   </Button>
