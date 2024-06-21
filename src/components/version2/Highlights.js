@@ -1,15 +1,15 @@
 "use client";
-import { Box, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import React from "react";
 
 export default function Highlights() {
   return (
-    <Box
+    <Container
       sx={{
         minHeight: "100vh",
         bgcolor: "#063b26",
-        maxWidth: "96%",
-        left: "2%",
+        minWidth: "96%",
+        // left: "2%",
         position: "relative",
         borderRadius: "20px",
         p: { xs: "10vh 4vh", lg: "20vh 10vh" },
@@ -29,7 +29,7 @@ export default function Highlights() {
           display: "flex",
           textAlign: "center",
           alignItems: "center",
-          // justifyContent: 'center',
+          justifyContent: 'space-evenly',
           flexDirection: { xs: "column", sm: "row" },
         }}
       >
@@ -38,11 +38,11 @@ export default function Highlights() {
             display: "flex",
             flexDirection: "column",
             bgcolor: "#ffffff",
-            minWidth: "31%",
+            // minWidth: "31%",
             minHeight: "45vh",
             p: "6vh",
             borderRadius: "20px",
-            margin: "1%",
+            margin: "2vh",
             alignItems: "center",
           }}
         >
@@ -72,11 +72,11 @@ export default function Highlights() {
             display: "flex",
             flexDirection: "column",
             bgcolor: "#ffffff",
-            minWidth: "31%",
+            // minWidth: "31%",
             minHeight: "45vh",
             p: "6vh",
             borderRadius: "20px",
-            margin: "1%",
+            margin: "2vh",
             alignItems: "center",
           }}
         >
@@ -106,11 +106,11 @@ export default function Highlights() {
             display: "flex",
             flexDirection: "column",
             bgcolor: "#ffffff",
-            minWidth: "31%",
+            // minWidth: "31%",
             minHeight: "45vh",
             p: "6vh",
             borderRadius: "20px",
-            margin: "1%",
+            margin: "2vh",
             alignItems: "center",
           }}
         >
@@ -136,6 +136,6 @@ export default function Highlights() {
           </Typography>
         </Box>
       </Box>
-    </Box>
+    </Container>
   );
 }
