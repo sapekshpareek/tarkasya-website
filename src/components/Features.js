@@ -343,7 +343,7 @@ export default function Features() {
               color: "white",
             }}
           >
-            Let's discuss how our solutions can solve your specific business challenges 
+            Let&apos;s discuss how our solutions can solve your specific business challenges 
             and help you achieve your goals.
           </Typography>
           <Stack

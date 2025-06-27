@@ -83,7 +83,7 @@ const testimonials = [
     name: "Sarah Johnson",
     role: "Operations Manager",
     company: "TechStart Inc.",
-    content: "Tarkasya's inventory management solution transformed our operations. We reduced stockouts by 60% and improved our order fulfillment time significantly.",
+    content: "Tarkasya&apos;s inventory management solution transformed our operations. We reduced stockouts by 60% and improved our order fulfillment time significantly.",
     rating: 5
   },
   {
@@ -141,7 +141,7 @@ export default function Highlights() {
                 lineHeight: 1.6,
               }}
             >
-              Numbers that speak for themselves. We've helped businesses achieve 
+              Numbers that speak for themselves. We&apos;ve helped businesses achieve 
               remarkable results through our innovative solutions.
             </Typography>
           </Fade>
@@ -248,7 +248,7 @@ export default function Highlights() {
                 lineHeight: 1.6,
               }}
             >
-              Let's discuss how we can help you achieve similar results and 
+              Let&apos;s discuss how we can help you achieve similar results and 
               transform your business challenges into opportunities.
             </Typography>
           </Fade>

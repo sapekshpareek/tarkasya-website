@@ -1,62 +1,43 @@
 "use client";
 import { Box, Button, Container, Typography } from "@mui/material";
-import React, { Component } from "react";
-import ErrorIcon from "@mui/icons-material/Error";
+import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
 
-export default function pageNotFound() {
+export default function NotFound() {
   return (
-    <Container>
+    <Container maxWidth="md" sx={{ minHeight: "80vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
       <Box
         sx={{
-          minHeight: "30rem",
-          minWidth: "100%",
-          bgcolor: "#ffeb69",
-          color: "#532e07",
-          borderRadius: "20px",
-          mt: 4,
-          p: "3rem",
+          width: "100%",
+          bgcolor: "#f5f7fa",
+          color: "#1d2786",
+          borderRadius: 4,
+          boxShadow: 3,
+          p: { xs: 4, md: 8 },
           textAlign: "center",
-          alignContent: "center",
-          // left: '10%',
-          // width: "80%",
         }}
       >
-        {/* <Box>
-          <Typography>
-            <ErrorIcon fontSize="large" />
-          </Typography>
-        </Box> */}
-        <Typography variant="h1" sx={{fontWeight:{xs: '600', sm: '500'}}}>
-          404 <br />
-          Not Found
+        <ErrorOutlineIcon sx={{ fontSize: 64, color: "#1d2786", mb: 2 }} />
+        <Typography variant="h2" sx={{ fontWeight: 700, mb: 2 }}>
+          404 - Page Not Found
         </Typography>
-        <Typography variant="h5">
-          The page you are looking for could not be found.
-          <br />
-          Please check the URL and try again.
+        <Typography variant="h6" sx={{ mb: 4, color: "#3b4bc8" }}>
+          Oops! The page you&apos;re looking for doesn&apos;t exist or has been moved.<br />
+          Let&apos;s get you back to something awesome.
         </Typography>
         <Button
           variant="contained"
-          component="a"
+          color="primary"
           href="/"
-          target="_blank"
-          sx={[
-            {
-              mt: 4,
-              color: "#ffeb69",
-              bgcolor: "#532e07",
-              borderRadius: "20px",
-              padding: "8px 15px",
-              fontWeight: "500",
-            },
-            (theme) => ({
-              "&:hover": {
-                bgcolor: "#532e07",
-              },
-            }),
-          ]}
+          sx={{
+            borderRadius: 3,
+            px: 4,
+            py: 1.5,
+            fontWeight: 600,
+            fontSize: "1.1rem",
+            boxShadow: 2,
+          }}
         >
-          Go To Home
+          Go to Home
         </Button>
       </Box>
     </Container>

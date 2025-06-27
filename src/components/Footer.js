@@ -380,13 +380,14 @@ export default function Footer() {
           <Typography
             variant="h6"
             sx={{
-              color: "rgba(255, 255, 255, 0.8)",
-              mb: 3,
+              mb: 2,
+              color: "white",
+              opacity: 0.9,
               maxWidth: "600px",
               mx: "auto",
             }}
           >
-            Let's discuss how our solutions can solve your specific challenges and drive your business forward.
+            Let&apos;s discuss how our solutions can solve your specific challenges and drive your business forward.
           </Typography>
           <Stack
             direction={{ xs: "column", sm: "row" }}
