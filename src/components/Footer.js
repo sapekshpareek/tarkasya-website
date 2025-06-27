@@ -27,25 +27,11 @@ const footerLinks = {
     { name: "Inventory Management", href: "#services" },
     { name: "Website Development", href: "#services" },
     { name: "Data Extraction", href: "#services" },
-    { name: "Business Automation", href: "#services" },
   ],
   company: [
     { name: "About Us", href: "#about" },
     { name: "Careers", href: "/careers" },
     { name: "Contact", href: "#contact" },
-    { name: "Blog", href: "#" },
-  ],
-  support: [
-    { name: "Help Center", href: "#" },
-    { name: "Documentation", href: "#" },
-    { name: "API Reference", href: "#" },
-    { name: "Status", href: "#" },
-  ],
-  legal: [
-    { name: "Privacy Policy", href: "#" },
-    { name: "Terms of Service", href: "#" },
-    { name: "Cookie Policy", href: "#" },
-    { name: "GDPR", href: "#" },
   ],
 };
 
@@ -81,11 +67,141 @@ export default function Footer() {
     }
   };
 
+  // Mobile Footer - Clean Design
+  if (isMobile) {
+    return (
+      <Box
+        id="contact"
+        sx={{
+          backgroundColor: "#0f172a",
+          color: "white",
+          py: 4,
+        }}
+      >
+        <Container maxWidth="lg">
+          {/* Main Content */}
+          <Box sx={{ mb: 4 }}>
+            {/* Logo and Tagline */}
+            <Box sx={{ mb: 3 }}>
+              <Typography
+                variant="h4"
+                sx={{
+                  fontWeight: 700,
+                  mb: 1,
+                  color: "white",
+                }}
+              >
+                Tarkasya
+              </Typography>
+              <Typography
+                variant="body1"
+                sx={{
+                  color: "rgba(255, 255, 255, 0.7)",
+                  lineHeight: 1.6,
+                }}
+              >
+                Your Problem, Our Product
+              </Typography>
+            </Box>
+            
+            {/* Contact Info */}
+            <Stack spacing={1.5} sx={{ mb: 3 }}>
+              <Box sx={{ display: "flex", alignItems: "center" }}>
+                <EmailIcon sx={{ mr: 1.5, color: "#ff6b35", fontSize: 20 }} />
+                <Link
+                  href="mailto:info@tarkasya.in"
+                  sx={{
+                    color: "rgba(255, 255, 255, 0.8)",
+                    textDecoration: "none",
+                    "&:hover": {
+                      color: "#ff6b35",
+                    },
+                  }}
+                >
+                  info@tarkasya.in
+                </Link>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center" }}>
+                <PhoneIcon sx={{ mr: 1.5, color: "#ff6b35", fontSize: 20 }} />
+                <Link
+                  href="tel:+1234567890"
+                  sx={{
+                    color: "rgba(255, 255, 255, 0.8)",
+                    textDecoration: "none",
+                    "&:hover": {
+                      color: "#ff6b35",
+                    },
+                  }}
+                >
+                  +1 (234) 567-890
+                </Link>
+              </Box>
+            </Stack>
+          </Box>
+
+          <Divider sx={{ borderColor: "rgba(255, 255, 255, 0.1)", mb: 3 }} />
+
+          {/* Bottom Footer */}
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: 2,
+            }}
+          >
+            {/* Social Links */}
+            <Stack direction="row" spacing={2}>
+              {socialLinks.map((social) => (
+                <Link
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: 35,
+                    height: 35,
+                    borderRadius: "50%",
+                    backgroundColor: "rgba(255, 255, 255, 0.1)",
+                    color: "rgba(255, 255, 255, 0.8)",
+                    transition: "all 0.3s ease",
+                    "&:hover": {
+                      backgroundColor: social.color,
+                      color: "white",
+                      transform: "translateY(-2px)",
+                    },
+                  }}
+                >
+                  {social.icon}
+                </Link>
+              ))}
+            </Stack>
+
+            {/* Copyright */}
+            <Typography
+              variant="body2"
+              sx={{
+                color: "rgba(255, 255, 255, 0.6)",
+                textAlign: "center",
+              }}
+            >
+              © {new Date().getFullYear()} Tarkasya. All rights reserved.
+            </Typography>
+          </Box>
+        </Container>
+      </Box>
+    );
+  }
+
+  // Desktop Footer - Full Version
   return (
     <Box
       id="contact"
       sx={{
-        backgroundColor: "background.dark",
+        backgroundColor: "#0f172a",
         color: "white",
         pt: { xs: 6, md: 8 },
         pb: { xs: 4, md: 6 },
@@ -95,7 +211,7 @@ export default function Footer() {
         {/* Main Footer Content */}
         <Grid container spacing={4} sx={{ mb: { xs: 4, md: 6 } }}>
           {/* Company Info */}
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={6}>
             <Box sx={{ mb: { xs: 3, md: 0 } }}>
               <Typography
                 variant="h4"
@@ -134,7 +250,7 @@ export default function Footer() {
                 <Box sx={{ display: "flex", alignItems: "center" }}>
                   <EmailIcon sx={{ mr: 2, color: "#ff6b35" }} />
                   <Link
-                    href="mailto:hello@tarkasya.com"
+                    href="mailto:info@tarkasya.in"
                     sx={{
                       color: "rgba(255, 255, 255, 0.8)",
                       textDecoration: "none",
@@ -143,7 +259,7 @@ export default function Footer() {
                       },
                     }}
                   >
-                    hello@tarkasya.com
+                    info@tarkasya.in
                   </Link>
                 </Box>
                 <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -176,8 +292,8 @@ export default function Footer() {
             </Box>
           </Grid>
 
-          {/* Footer Links */}
-          <Grid item xs={12} sm={6} md={2}>
+          {/* Footer Links - Only show on desktop */}
+          <Grid item xs={12} sm={6} md={3}>
             <Typography
               variant="h6"
               sx={{
@@ -208,7 +324,7 @@ export default function Footer() {
             </Stack>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={2}>
+          <Grid item xs={12} sm={6} md={3}>
             <Typography
               variant="h6"
               sx={{
@@ -238,68 +354,6 @@ export default function Footer() {
               ))}
             </Stack>
           </Grid>
-
-          <Grid item xs={12} sm={6} md={2}>
-            <Typography
-              variant="h6"
-              sx={{
-                fontWeight: 600,
-                mb: 3,
-                color: "white",
-              }}
-            >
-              Support
-            </Typography>
-            <Stack spacing={2}>
-              {footerLinks.support.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  sx={{
-                    color: "rgba(255, 255, 255, 0.7)",
-                    textDecoration: "none",
-                    transition: "color 0.3s ease",
-                    "&:hover": {
-                      color: "#ff6b35",
-                    },
-                  }}
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </Stack>
-          </Grid>
-
-          <Grid item xs={12} sm={6} md={2}>
-            <Typography
-              variant="h6"
-              sx={{
-                fontWeight: 600,
-                mb: 3,
-                color: "white",
-              }}
-            >
-              Legal
-            </Typography>
-            <Stack spacing={2}>
-              {footerLinks.legal.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  sx={{
-                    color: "rgba(255, 255, 255, 0.7)",
-                    textDecoration: "none",
-                    transition: "color 0.3s ease",
-                    "&:hover": {
-                      color: "#ff6b35",
-                    },
-                  }}
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </Stack>
-          </Grid>
         </Grid>
 
         {/* CTA Section */}
@@ -308,8 +362,8 @@ export default function Footer() {
             textAlign: "center",
             p: { xs: 3, md: 4 },
             borderRadius: 3,
-            background: "linear-gradient(135deg, rgba(29, 39, 134, 0.1) 0%, rgba(59, 75, 200, 0.1) 100%)",
-            border: "1px solid rgba(29, 39, 134, 0.2)",
+            background: "linear-gradient(135deg, rgba(29, 39, 134, 0.2) 0%, rgba(59, 75, 200, 0.2) 100%)",
+            border: "1px solid rgba(29, 39, 134, 0.3)",
             mb: { xs: 4, md: 6 },
           }}
         >

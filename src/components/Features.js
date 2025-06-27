@@ -24,6 +24,8 @@ import {
   TrendingUp as TrendingUpIcon,
   ArrowForward as ArrowForwardIcon,
   CheckCircle as CheckCircleIcon,
+  Business as BusinessIcon,
+  AutoAwesome as AutoAwesomeIcon,
 } from "@mui/icons-material";
 import React from "react";
 
@@ -53,7 +55,7 @@ const services = [
     color: "secondary.main"
   },
   {
-    icon: <DataIcon sx={{ fontSize: 40, color: "accent.mint" }} />,
+    icon: <DataIcon sx={{ fontSize: 40, color: "#10b981" }} />,
     title: "Data Extraction",
     description: "Automate data collection from websites and transform raw information into actionable insights.",
     features: [
@@ -62,35 +64,40 @@ const services = [
       "Data cleaning & processing",
       "Custom reporting"
     ],
-    color: "accent.mint"
+    color: "#10b981"
   }
 ];
 
 const features = [
   {
-    icon: <AnalyticsIcon sx={{ fontSize: 32, color: "primary.main" }} />,
+    icon: <AnalyticsIcon sx={{ fontSize: 28, color: "white" }} />,
     title: "Advanced Analytics",
-    description: "Get deep insights into your business performance with comprehensive analytics and reporting."
+    description: "Get deep insights into your business performance"
   },
   {
-    icon: <SecurityIcon sx={{ fontSize: 32, color: "primary.main" }} />,
+    icon: <SecurityIcon sx={{ fontSize: 28, color: "white" }} />,
     title: "Enterprise Security",
-    description: "Bank-level security protocols to protect your data and ensure compliance with industry standards."
+    description: "Bank-level security protocols to protect your data"
   },
   {
-    icon: <SpeedIcon sx={{ fontSize: 32, color: "primary.main" }} />,
+    icon: <SpeedIcon sx={{ fontSize: 28, color: "white" }} />,
     title: "Lightning Fast",
-    description: "Optimized performance ensures your solutions run smoothly and efficiently at scale."
+    description: "Optimized performance ensures smooth operations"
   },
   {
-    icon: <SupportIcon sx={{ fontSize: 32, color: "primary.main" }} />,
+    icon: <SupportIcon sx={{ fontSize: 28, color: "white" }} />,
     title: "24/7 Support",
-    description: "Round-the-clock technical support to help you succeed with our solutions."
+    description: "Round-the-clock technical support"
   },
   {
-    icon: <TrendingUpIcon sx={{ fontSize: 32, color: "primary.main" }} />,
+    icon: <TrendingUpIcon sx={{ fontSize: 28, color: "white" }} />,
     title: "Scalable Solutions",
-    description: "Our solutions grow with your business, from startup to enterprise level."
+    description: "Our solutions grow with your business"
+  },
+  {
+    icon: <AutoAwesomeIcon sx={{ fontSize: 28, color: "white" }} />,
+    title: "Innovation First",
+    description: "Cutting-edge technology and innovative approaches"
   }
 ];
 
@@ -243,7 +250,7 @@ export default function Features() {
             Why Choose Tarkasya?
           </Typography>
           
-          <Grid container spacing={4}>
+          <Grid container spacing={3}>
             {features.map((feature, index) => (
               <Grid item xs={12} sm={6} md={4} key={index}>
                 <Fade in timeout={600 + index * 100}>
@@ -265,8 +272,8 @@ export default function Features() {
                   >
                     <Box
                       sx={{
-                        width: 60,
-                        height: 60,
+                        width: 50,
+                        height: 50,
                         borderRadius: "50%",
                         backgroundColor: "primary.main",
                         color: "white",
@@ -283,7 +290,7 @@ export default function Features() {
                       variant="h6"
                       sx={{
                         fontWeight: 600,
-                        mb: 2,
+                        mb: 1,
                         color: "text.primary",
                       }}
                     >
@@ -293,7 +300,7 @@ export default function Features() {
                       variant="body2"
                       sx={{
                         color: "text.secondary",
-                        lineHeight: 1.6,
+                        lineHeight: 1.5,
                       }}
                     >
                       {feature.description}
@@ -321,6 +328,7 @@ export default function Features() {
             sx={{
               mb: 3,
               fontWeight: 600,
+              color: "white",
             }}
           >
             Ready to Transform Your Business?
@@ -332,6 +340,7 @@ export default function Features() {
               opacity: 0.9,
               maxWidth: "600px",
               mx: "auto",
+              color: "white",
             }}
           >
             Let's discuss how our solutions can solve your specific business challenges 

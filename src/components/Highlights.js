@@ -14,44 +14,40 @@ import {
 } from "@mui/material";
 import {
   TrendingUp as TrendingUpIcon,
+  People as PeopleIcon,
   Speed as SpeedIcon,
   Security as SecurityIcon,
-  Support as SupportIcon,
-  Business as BusinessIcon,
-  Code as CodeIcon,
-  DataUsage as DataIcon,
-  Inventory as InventoryIcon,
 } from "@mui/icons-material";
 import React from "react";
 
 const stats = [
   {
-    icon: <BusinessIcon sx={{ fontSize: 40, color: "primary.main" }} />,
-    number: "500+",
-    label: "Businesses Served",
-    description: "From startups to enterprises",
-    color: "primary.main"
+    icon: <TrendingUpIcon sx={{ fontSize: 40, color: "white" }} />,
+    value: "500+",
+    label: "Projects Completed",
+    description: "Successfully delivered solutions across various industries",
+    color: "#1d2786"
   },
   {
-    icon: <CodeIcon sx={{ fontSize: 40, color: "secondary.main" }} />,
-    number: "200+",
-    label: "Websites Built",
-    description: "Modern, responsive solutions",
-    color: "secondary.main"
+    icon: <PeopleIcon sx={{ fontSize: 40, color: "white" }} />,
+    value: "50+",
+    label: "Happy Clients",
+    description: "Businesses that trust us with their digital transformation",
+    color: "#3b4bc8"
   },
   {
-    icon: <DataIcon sx={{ fontSize: 40, color: "accent.mint" }} />,
-    number: "1M+",
-    label: "Data Points Extracted",
-    description: "Automated data collection",
-    color: "accent.mint"
+    icon: <SpeedIcon sx={{ fontSize: 40, color: "white" }} />,
+    value: "99.9%",
+    label: "Uptime",
+    description: "Reliable infrastructure ensuring your business continuity",
+    color: "#ff6b35"
   },
   {
-    icon: <InventoryIcon sx={{ fontSize: 40, color: "accent.yellow" }} />,
-    number: "50+",
-    label: "Inventory Systems",
-    description: "Streamlined operations",
-    color: "accent.yellow"
+    icon: <SecurityIcon sx={{ fontSize: 40, color: "white" }} />,
+    value: "100%",
+    label: "Secure",
+    description: "Bank-level security protocols protecting your data",
+    color: "#10b981"
   }
 ];
 
@@ -75,7 +71,7 @@ const benefits = [
     metric: "99.9%"
   },
   {
-    icon: <SupportIcon sx={{ fontSize: 32, color: "primary.main" }} />,
+    icon: <SecurityIcon sx={{ fontSize: 32, color: "primary.main" }} />,
     title: "24/7 Support",
     description: "Round-the-clock technical support ensures you never face challenges alone in your digital transformation journey.",
     metric: "24/7"
@@ -112,22 +108,20 @@ export default function Highlights() {
 
   return (
     <Box
-      id="about"
       sx={{
         py: { xs: 6, md: 8 },
         backgroundColor: "background.default",
       }}
     >
       <Container maxWidth="lg">
-        {/* Stats Section */}
-        <Box sx={{ mb: { xs: 6, md: 8 } }}>
+        {/* Header */}
+        <Box sx={{ textAlign: "center", mb: { xs: 4, md: 6 } }}>
           <Fade in timeout={800}>
             <Typography
               variant="h2"
               sx={{
-                textAlign: "center",
                 fontWeight: 700,
-                mb: 6,
+                mb: 3,
                 background: "linear-gradient(135deg, #1d2786 0%, #3b4bc8 100%)",
                 backgroundClip: "text",
                 WebkitBackgroundClip: "text",
@@ -137,265 +131,127 @@ export default function Highlights() {
               Our Impact
             </Typography>
           </Fade>
-          
-          <Grid container spacing={4}>
-            {stats.map((stat, index) => (
-              <Grid item xs={12} sm={6} md={3} key={index}>
-                <Slide direction="up" in timeout={600 + index * 200}>
-                  <Card
-                    sx={{
-                      textAlign: "center",
-                      p: 4,
-                      height: "100%",
-                      borderRadius: 3,
-                      border: "1px solid",
-                      borderColor: "border.light",
-                      transition: "all 0.3s ease",
-                      "&:hover": {
-                        transform: "translateY(-8px)",
-                        boxShadow: "0 20px 40px rgba(0, 0, 0, 0.1)",
-                        borderColor: stat.color,
-                      },
-                    }}
-                  >
+          <Fade in timeout={1000}>
+            <Typography
+              variant="h5"
+              sx={{
+                color: "text.secondary",
+                maxWidth: "700px",
+                mx: "auto",
+                lineHeight: 1.6,
+              }}
+            >
+              Numbers that speak for themselves. We've helped businesses achieve 
+              remarkable results through our innovative solutions.
+            </Typography>
+          </Fade>
+        </Box>
+
+        {/* Stats Grid */}
+        <Grid container spacing={4}>
+          {stats.map((stat, index) => (
+            <Grid item xs={12} sm={6} md={3} key={index}>
+              <Slide direction="up" in timeout={600 + index * 200}>
+                <Card
+                  sx={{
+                    height: "100%",
+                    p: 4,
+                    borderRadius: 3,
+                    border: "1px solid",
+                    borderColor: "border.light",
+                    transition: "all 0.3s ease",
+                    "&:hover": {
+                      transform: "translateY(-8px)",
+                      boxShadow: "0 20px 40px rgba(0, 0, 0, 0.1)",
+                      borderColor: stat.color,
+                    },
+                  }}
+                >
+                  <CardContent sx={{ p: 0, textAlign: "center" }}>
                     <Box
                       sx={{
                         width: 80,
                         height: 80,
                         borderRadius: "50%",
-                        backgroundColor: `${stat.color}15`,
+                        backgroundColor: stat.color,
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
                         mx: "auto",
                         mb: 3,
+                        boxShadow: `0 8px 25px ${stat.color}40`,
                       }}
                     >
                       {stat.icon}
                     </Box>
+                    
                     <Typography
                       variant="h2"
                       sx={{
-                        fontWeight: 700,
-                        color: stat.color,
-                        mb: 1,
-                      }}
-                    >
-                      {stat.number}
-                    </Typography>
-                    <Typography
-                      variant="h6"
-                      sx={{
-                        fontWeight: 600,
+                        fontWeight: 800,
                         mb: 1,
                         color: "text.primary",
+                        fontSize: { xs: "2.5rem", md: "3rem" },
+                      }}
+                    >
+                      {stat.value}
+                    </Typography>
+                    
+                    <Typography
+                      variant="h5"
+                      sx={{
+                        fontWeight: 600,
+                        mb: 2,
+                        color: stat.color,
                       }}
                     >
                       {stat.label}
                     </Typography>
-                    <Typography
-                      variant="body2"
-                      sx={{
-                        color: "text.secondary",
-                      }}
-                    >
-                      {stat.description}
-                    </Typography>
-                  </Card>
-                </Slide>
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
-
-        {/* Benefits Section */}
-        <Box sx={{ mb: { xs: 6, md: 8 } }}>
-          <Typography
-            variant="h3"
-            sx={{
-              textAlign: "center",
-              mb: 6,
-              fontWeight: 600,
-              color: "text.primary",
-            }}
-          >
-            Why Businesses Choose Us
-          </Typography>
-          
-          <Grid container spacing={4}>
-            {benefits.map((benefit, index) => (
-              <Grid item xs={12} md={6} key={index}>
-                <Fade in timeout={600 + index * 200}>
-                  <Card
-                    sx={{
-                      p: 4,
-                      height: "100%",
-                      borderRadius: 3,
-                      border: "1px solid",
-                      borderColor: "border.light",
-                      transition: "all 0.3s ease",
-                      "&:hover": {
-                        transform: "translateY(-4px)",
-                        boxShadow: "0 12px 24px rgba(0, 0, 0, 0.1)",
-                        borderColor: "primary.main",
-                      },
-                    }}
-                  >
-                    <Box sx={{ display: "flex", alignItems: "flex-start", mb: 3 }}>
-                      <Box
-                        sx={{
-                          width: 60,
-                          height: 60,
-                          borderRadius: "50%",
-                          backgroundColor: "primary.main",
-                          color: "white",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          mr: 3,
-                          flexShrink: 0,
-                        }}
-                      >
-                        {benefit.icon}
-                      </Box>
-                      <Box sx={{ flex: 1 }}>
-                        <Typography
-                          variant="h5"
-                          sx={{
-                            fontWeight: 600,
-                            mb: 1,
-                            color: "text.primary",
-                          }}
-                        >
-                          {benefit.title}
-                        </Typography>
-                        <Typography
-                          variant="body1"
-                          sx={{
-                            color: "text.secondary",
-                            lineHeight: 1.6,
-                          }}
-                        >
-                          {benefit.description}
-                        </Typography>
-                      </Box>
-                    </Box>
-                    <Box
-                      sx={{
-                        display: "inline-block",
-                        px: 3,
-                        py: 1,
-                        backgroundColor: "primary.main",
-                        color: "white",
-                        borderRadius: "20px",
-                        fontWeight: 600,
-                      }}
-                    >
-                      {benefit.metric}
-                    </Box>
-                  </Card>
-                </Fade>
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
-
-        {/* Testimonials Section */}
-        <Box>
-          <Typography
-            variant="h3"
-            sx={{
-              textAlign: "center",
-              mb: 6,
-              fontWeight: 600,
-              color: "text.primary",
-            }}
-          >
-            What Our Clients Say
-          </Typography>
-          
-          <Grid container spacing={4}>
-            {testimonials.map((testimonial, index) => (
-              <Grid item xs={12} md={4} key={index}>
-                <Slide direction="up" in timeout={600 + index * 200}>
-                  <Card
-                    sx={{
-                      p: 4,
-                      height: "100%",
-                      borderRadius: 3,
-                      border: "1px solid",
-                      borderColor: "border.light",
-                      transition: "all 0.3s ease",
-                      "&:hover": {
-                        transform: "translateY(-4px)",
-                        boxShadow: "0 12px 24px rgba(0, 0, 0, 0.1)",
-                        borderColor: "primary.main",
-                      },
-                    }}
-                  >
-                    <Box sx={{ mb: 3 }}>
-                      <Stack direction="row" spacing={0.5}>
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                          <Box
-                            key={i}
-                            sx={{
-                              color: "#ffd700",
-                              fontSize: "1.2rem",
-                            }}
-                          >
-                            ⭐
-                          </Box>
-                        ))}
-                      </Stack>
-                    </Box>
                     
                     <Typography
                       variant="body1"
                       sx={{
-                        fontStyle: "italic",
-                        lineHeight: 1.6,
-                        mb: 3,
                         color: "text.secondary",
+                        lineHeight: 1.6,
                       }}
                     >
-                      "{testimonial.content}"
+                      {stat.description}
                     </Typography>
-                    
-                    <Box>
-                      <Typography
-                        variant="h6"
-                        sx={{
-                          fontWeight: 600,
-                          mb: 0.5,
-                          color: "text.primary",
-                        }}
-                      >
-                        {testimonial.name}
-                      </Typography>
-                      <Typography
-                        variant="body2"
-                        sx={{
-                          color: "text.secondary",
-                          fontWeight: 500,
-                        }}
-                      >
-                        {testimonial.role}
-                      </Typography>
-                      <Typography
-                        variant="body2"
-                        sx={{
-                          color: "primary.main",
-                          fontWeight: 600,
-                        }}
-                      >
-                        {testimonial.company}
-                      </Typography>
-                    </Box>
-                  </Card>
-                </Slide>
-              </Grid>
-            ))}
-          </Grid>
+                  </CardContent>
+                </Card>
+              </Slide>
+            </Grid>
+          ))}
+        </Grid>
+
+        {/* Additional Info */}
+        <Box sx={{ mt: { xs: 4, md: 6 }, textAlign: "center" }}>
+          <Fade in timeout={1200}>
+            <Typography
+              variant="h4"
+              sx={{
+                fontWeight: 600,
+                mb: 3,
+                color: "text.primary",
+              }}
+            >
+              Ready to Join Our Success Stories?
+            </Typography>
+          </Fade>
+          <Fade in timeout={1400}>
+            <Typography
+              variant="h6"
+              sx={{
+                color: "text.secondary",
+                maxWidth: "600px",
+                mx: "auto",
+                lineHeight: 1.6,
+              }}
+            >
+              Let's discuss how we can help you achieve similar results and 
+              transform your business challenges into opportunities.
+            </Typography>
+          </Fade>
         </Box>
       </Container>
     </Box>

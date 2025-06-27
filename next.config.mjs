@@ -8,7 +8,7 @@ const nextConfig = {
   
   // Image optimization settings
   images: {
-    domains: ['res.cloudinary.com'],
+    domains: ['tarkasya.in'],
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
@@ -43,17 +43,17 @@ const nextConfig = {
             value: 'origin-when-cross-origin',
           },
           {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()',
+            key: 'X-DNS-Prefetch-Control',
+            value: 'on',
           },
         ],
       },
       {
-        source: '/api/(.*)',
+        source: '/sitemap.xml',
         headers: [
           {
-            key: 'Cache-Control',
-            value: 'no-store, max-age=0',
+            key: 'Content-Type',
+            value: 'application/xml',
           },
         ],
       },
@@ -61,12 +61,11 @@ const nextConfig = {
   },
   
   // Redirects for better SEO
-  async redirects() {
+  async rewrites() {
     return [
       {
-        source: '/home',
-        destination: '/',
-        permanent: true,
+        source: '/sitemap.xml',
+        destination: '/api/sitemap',
       },
     ];
   },
