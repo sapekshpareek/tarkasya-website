@@ -121,21 +121,6 @@ export default function Footer() {
                   info@tarkasya.in
                 </Link>
               </Box>
-              <Box sx={{ display: "flex", alignItems: "center" }}>
-                <PhoneIcon sx={{ mr: 1.5, color: "#ff6b35", fontSize: 20 }} />
-                <Link
-                  href="tel:+1234567890"
-                  sx={{
-                    color: "rgba(255, 255, 255, 0.8)",
-                    textDecoration: "none",
-                    "&:hover": {
-                      color: "#ff6b35",
-                    },
-                  }}
-                >
-                  +1 (234) 567-890
-                </Link>
-              </Box>
             </Stack>
           </Box>
 
@@ -260,21 +245,6 @@ export default function Footer() {
                     }}
                   >
                     info@tarkasya.in
-                  </Link>
-                </Box>
-                <Box sx={{ display: "flex", alignItems: "center" }}>
-                  <PhoneIcon sx={{ mr: 2, color: "#ff6b35" }} />
-                  <Link
-                    href="tel:+1234567890"
-                    sx={{
-                      color: "rgba(255, 255, 255, 0.8)",
-                      textDecoration: "none",
-                      "&:hover": {
-                        color: "#ff6b35",
-                      },
-                    }}
-                  >
-                    +1 (234) 567-890
                   </Link>
                 </Box>
                 <Box sx={{ display: "flex", alignItems: "center" }}>
