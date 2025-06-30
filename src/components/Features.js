@@ -116,7 +116,7 @@ export default function Features() {
     <Box
       id="services"
       sx={{
-        py: { xs: 8, md: 12 },
+        py: { xs: 8, md: 8 },
         backgroundColor: "background.light",
       }}
     >

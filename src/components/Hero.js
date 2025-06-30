@@ -30,7 +30,7 @@ export default function Hero() {
       sx={{
         backgroundColor: "#1d2786",
         color: "white",
-        minHeight: "89vh",
+        height: isMobile ? "95vh" : "89vh",
         display: "flex",
         alignItems: "center",
         pt: { xs: 8, md: 0 },
