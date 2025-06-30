@@ -78,12 +78,14 @@ export default function Careers() {
         </Grid>
 
         {/* Open Positions Section */}
-        <Typography variant="h4" sx={{ fontWeight: 700, mb: 2, color: "#1d2786" }} id="positions">
+
+        {/* <Typography variant="h4" sx={{ fontWeight: 700, mb: 2, color: "#1d2786" }} id="positions">
           Open Positions
         </Typography>
         <Typography variant="body1" sx={{ color: "text.secondary", mb: 4 }}>
           We&apos;re working on exciting opportunities for you to join our team. Please check back soon for job postings!
-        </Typography>
+        </Typography> */}
+
         {/* Example for future job cards:
         <Grid container spacing={4} justifyContent="center">
           <Grid item xs={12} md={6}>
